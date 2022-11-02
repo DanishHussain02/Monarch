@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --blue: #00355f;
+  --yellow: #fbb03b;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.header_graph {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+  width: 50%;
+}
+.navbar {
+  border: 1px black solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  margin: 0px 8%;
+}
+
+.navbar .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  border: 1px green solid;
+}
+
+.navbar .logo {
+  border: 1px black solid;
+  padding-top: 10px;
+}
+
+.navbar .logo a img {
+  height: 50px;
+  width: auto;
+}
+
+.navbar .nav-links .link {
+  margin: 0px 30px;
+  font-size: 16px;
+  color: var(--yellow);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navbar .nav-links .link a {
+  text-decoration: none;
+  color: var(--yellow);
+}
+
+.navbar .nav-links .link a:hover {
+    opacity: 0.8;
+}
+
+.navbar .nav-links .link button {
+  background-color: var(--yellow);
+  border: none;
+  padding: 14px 29px;
+
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.navbar .nav-links .link button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+  width: 30px;
+  height: 2px;
+  background: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.hamburger {
+  display: none;
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/** HEADER */
+.header {
+  margin: 0px 8%;
+  border: 1px red solid;
+}
+
+.header .testo h3 {
+  border: 1px green solid;
+  width: 45%;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 42px;
+  color: var(--blue);
+  margin-top: 27vh;
+  margin-bottom: 20px;
+}
+
+.header .testo a {
+  cursor: pointer;
+  border: 1px var(--blue) solid;
+  padding: 10px 14px;
+  color: var(--blue);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .navbar .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.7s ease;
+  }
+
+  .navbar .nav-links.open {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    padding: 30% 0px;
+    background-color: white;
+    animation: example 0.2s ease-out;
+  }
+
+  .nav-links.open .link {
+    font-size: 20px;
+    margin: 20px 0px;
+  }
+
+  .nav-links.open .link button {
+    font-size: 20px;
+  }
+  .navbar .logo a img {
+    height: 40px;
+    width: auto;
+  }
+
+  @keyframes example {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 750px) {
+    .header .testo h3 {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .header_graph{
+        top: 58vh;
+        width: 90%;
+      }
+
+}
