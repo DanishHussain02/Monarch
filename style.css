@@ -9,10 +9,12 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Josefin Sans", sans-serif;
+  
 }
 
 .header_graph {
@@ -65,7 +67,7 @@ body {
 }
 
 .navbar .nav-links .link a:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .navbar .nav-links .link button {
@@ -131,8 +133,46 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
+  text-decoration: none;
 }
 
+.chi-siamo {
+  border: 1px red solid;
+  margin: 350px 8%;
+  width: 84%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.chi-siamo .col-img {
+  border: 1px black solid;
+  width: 47%;
+}
+
+.chi-siamo .col-img img {
+  width: 100%;
+}
+
+.chi-siamo .col-testo {
+  width: 47%;
+  border: 1px black solid;
+}
+
+.chi-siamo .col-testo h4 {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 125%;
+  color: var(--yellow);
+  padding-bottom: 15px;
+}
+
+.chi-siamo .col-testo p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  color: var(--blue);
+}
 
 @media only screen and (max-width: 900px) {
   .navbar .nav-links {
@@ -181,20 +221,31 @@ body {
       opacity: 1;
     }
   }
+  .chi-siamo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 500px;
+  }
+  .chi-siamo .col-testo{
+    order: 1;
+    width: 100%;
+  }
+  .chi-siamo .col-img{
+    order: 2;
+    width: 100%;
+    margin-top: 40px;
+  }
 }
 
-
-
 @media only screen and (max-width: 750px) {
-    .header .testo h3 {
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
+  .header .testo h3 {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-      .header_graph{
-        top: 58vh;
-        width: 90%;
-      }
-
+  .header_graph {
+    top: 58vh;
+    width: 90%;
+  }
 }
