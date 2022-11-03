@@ -14,7 +14,6 @@
 
 body {
   font-family: "Josefin Sans", sans-serif;
-  
 }
 
 .header_graph {
@@ -23,6 +22,7 @@ body {
   right: 0;
   z-index: -2;
   width: 50%;
+  margin-bottom: 100px;
 }
 .navbar {
   border: 1px black solid;
@@ -122,7 +122,7 @@ body {
   line-height: 42px;
   color: var(--blue);
   margin-top: 27vh;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .header .testo a {
@@ -138,7 +138,7 @@ body {
 
 .chi-siamo {
   border: 1px red solid;
-  margin: 350px 8%;
+  margin: 330px 8% 80px 8%;
   width: 84%;
   display: flex;
   flex-direction: row;
@@ -172,6 +172,125 @@ body {
   font-size: 18px;
   line-height: 120%;
   color: var(--blue);
+}
+
+.info-grafico {
+  border: 1px red solid;
+  margin: 0px 8% 0px 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.info-grafico .col-img {
+  width: 57%;
+}
+.info-grafico .col-img img {
+  width: 100%;
+}
+
+.info-grafico .col-testo {
+  width: 38%;
+}
+
+.accordion {
+  background: none;
+  border: none;
+  border-top: 1px var(--blue) solid;
+  /* border-bottom: 1px var(--blue) solid; */
+  cursor: pointer;
+  padding: 15px 0px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  transition: 0.4s;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 125%;
+}
+
+.active,
+.accordion:hover {
+  /* background-color: rgb(228, 228, 228); */
+}
+
+.accordion:after {
+  content: "\002B";
+  font-weight: bold;
+  float: right;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0px;
+  background: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel p {
+  padding: 0px 0px 15px 0px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--blue);
+}
+
+.grafico {
+  width: 84%;
+  margin: 30px 8% 80px 8%;
+}
+
+.youtube {
+  border: 2px red solid;
+  margin: 0px 8% 80px 8%;
+}
+
+.youtube h4 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--blue);
+}
+
+.youtube p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--blue);
+}
+
+.youtube .container{
+    border: 1px red solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-top: 40px;
+}
+
+.youtube .container .card{
+    border: 2px solid black;
+    width: 30%;
+}
+
+.youtube .container .card p{
+    text-align: left;
+    margin-top: 25px;
+    font-size: 18px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -221,19 +340,19 @@ body {
       opacity: 1;
     }
   }
-  .chi-siamo{
+  .chi-siamo {
     display: flex;
     flex-direction: column;
     margin-top: 500px;
   }
-  .chi-siamo .col-testo{
+  .chi-siamo .col-testo {
     order: 1;
     width: 100%;
   }
-  .chi-siamo .col-testo p{
+  .chi-siamo .col-testo p {
     font-size: 16px;
   }
-  .chi-siamo .col-img{
+  .chi-siamo .col-img {
     order: 2;
     width: 100%;
     margin-top: 40px;
@@ -244,11 +363,55 @@ body {
   .header .testo h3 {
     width: 100%;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .header_graph {
     top: 58vh;
     width: 90%;
   }
+
+  .info-grafico {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    margin: 0px;
+  }
+
+  .info-grafico .col-img {
+    width: 90%;
+    order: 1;
+  }
+  .info-grafico .col-img img {
+    width: 100%;
+  }
+
+  .info-grafico .col-testo {
+    margin-top: 20px;
+    padding: 0px 8%;
+    width: 100%;
+    order: 2;
+  }
+  .grafico {
+    width: 90%;
+    margin: 30px 5% 80px 5%;
+  }
+  .youtube .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 40px;
+}
+
+.youtube .container .card{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.youtube .container .card:nth-child(1){
+    margin-top: 0px;
+}
 }

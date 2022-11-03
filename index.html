@@ -40,8 +40,7 @@
           Governiamo l'infinatamente sconosciuto, diffidando da cio che è
           finitamente conosciuto
         </h3>
-        <a style="vertical-align: center"
-        href="#flap"
+        <a style="vertical-align: center" href="#flap"
           >Scopri di più
           <img
             src="assets/arrow-right.svg"
@@ -75,7 +74,166 @@
       </div>
     </div>
 
+    <!-- INFO GRAPH -->
+    <div class="info-grafico">
+      <div class="col-img">
+        <img src="assets/graph2.png" alt="" srcset="" />
+      </div>
+      <div class="col-testo">
+        <button class="accordion" style="color: #fbb03b; border-top: none">
+          Strategia Monarch
+        </button>
+        <div class="panel">
+          <p>
+            La performance della strategia Monarch è calcolata al netto dei
+            costi degli strumenti finanziari sottostanti e al lordo del costo
+            della liquidità* e degli oneri fiscali. Il costo della liquidità è
+            stato calcolato utilizzando il rendimento annualizzato dell'ETF
+            iShares € Govt Bond 0-1yr UCITS (IEGE), pari a -0.85%. Tale costo
+            non è stato applicato per il periodo che va dal 13/08/2021 al
+            31/08/2022.
+          </p>
+        </div>
+
+        <button class="accordion" style="color: #ef6a85">
+          Benchmark Azionario
+        </button>
+        <div class="panel">
+          <p>
+            Il benchmark azionario è rappresentato dall'etf iShares S&P 500 EUR
+            Hedged (IUSE) o iShares Core MSCI World UCITS (IWLE).
+          </p>
+        </div>
+
+        <button class="accordion" style="color: #3e9ee1">
+          Benchmark Bilanciato 60-40
+        </button>
+        <div class="panel">
+          <p>
+            Il benchmark bilanciato 60-40 è rappresentato dall'etf Vanguard
+            lifestrategy 60 (VNGA60).
+          </p>
+        </div>
+        <button class="accordion" style="color: #50bebe">
+          Benchmark obbligazionario
+        </button>
+        <div class="panel" style="border-bottom: 1px var(--blue) solid">
+          <p>
+            Il benchmark obbligazionario è rappresentato dall'etf iShares Core
+            Global Aggragate Bond (AGGH).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grafico">
+      <canvas id="myChart" height="100" ></canvas>
+    </div>
+
+    <!-- YOUTUBE -->
+    <div class="youtube">
+        <h4>Iscriviti al nostro canale youtube</h4>
+        <p>103K views e 12k iscritti</p>
+        <div class="container">
+            <div class="card">
+                <iframe height="210" width="100%" src="https://www.youtube.com/embed/rJQFnNgUAPA"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Il problema del Cigno Nero</p>
+            </div>
+            <div class="card">
+                <iframe width="100%" height="210" src="https://www.youtube.com/embed/wHFo4-jeaqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                <p>Mediocristan VS Estremistan
+                </p>
+            </div>
+            <div class="card">
+                <iframe width="100%" height="210" src="https://www.youtube.com/embed/i0KZ_EfIkwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                <p>Una strategia anti cigno nero
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIL -->
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
+      // GRAFICO
+      const ctx = document.getElementById("myChart").getContext("2d");
+      const myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          datasets: [
+            {
+              label: "Strategia Monarch",
+              borderColor: "#FBB03B",
+              data: [10, 13, 5, 2, 20, 30, 45],
+              borderWidth: 2,
+              pointRadius: 0,
+            },
+            {
+              label: "Benchmark Azionario",
+              borderColor: "#EF6A85",
+              data: [26, 5, 36, 45, 28, 24, 37],
+              borderWidth: 2,
+              pointRadius: 0,
+            },
+            {
+              label: "Benchmark Bilanciato 60-40",
+              borderColor: "#3E9EE1",
+              data: [27, 5, 40, 41, 21, 2, 20],
+              borderWidth: 2,
+              pointRadius: 0,
+            },
+            {
+              label: "Benchmark obbligazionario",
+              borderColor: "#50BEBE",
+              data: [30, 45, 18, 16, 31, 19, 28],
+              borderWidth: 2,
+              pointRadius: 0,
+            },
+          ],
+        },
+        options: {
+          transitions: {
+            show: {
+              animations: {
+                x: {
+                  from: 0,
+                },
+                y: {
+                  from: 0,
+                },
+              },
+            },
+            hide: {
+              animations: {
+                x: {
+                  to: 0,
+                },
+                y: {
+                  to: 0,
+                },
+              },
+            },
+          },
+          plugins: {
+            legend: false,
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+            y1: {
+              type: "linear",
+              display: true,
+              position: "right",
+              grid: {
+                drawOnChartArea: false, // only want the grid lines for one axis to show up
+              },
+            },
+          },
+        },
+      });
+      // NAVBAR
       const hamburger = document.querySelector(".hamburger");
       const navLinks = document.querySelector(".nav-links");
       const links = document.querySelectorAll(".nav-links li");
@@ -90,7 +248,23 @@
         //Hamburger Animation
         hamburger.classList.toggle("toggle");
       });
+      // ACCORDION
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
     </script>
+
     <script src="app.js"></script>
   </body>
 </html>
