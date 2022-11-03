@@ -25,7 +25,6 @@ body {
   margin-bottom: 100px;
 }
 .navbar {
-  border: 1px black solid;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -40,11 +39,9 @@ body {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  border: 1px green solid;
 }
 
 .navbar .logo {
-  border: 1px black solid;
   padding-top: 10px;
 }
 
@@ -111,11 +108,9 @@ body {
 /** HEADER */
 .header {
   margin: 0px 8%;
-  border: 1px red solid;
 }
 
 .header .testo h3 {
-  border: 1px green solid;
   width: 45%;
   font-weight: 700;
   font-size: 42px;
@@ -127,17 +122,16 @@ body {
 
 .header .testo a {
   cursor: pointer;
-  border: 1px var(--blue) solid;
   padding: 10px 14px;
   color: var(--blue);
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
+  border: 1px var(--blue) solid;
 }
 
 .chi-siamo {
-  border: 1px red solid;
   margin: 330px 8% 80px 8%;
   width: 84%;
   display: flex;
@@ -146,7 +140,6 @@ body {
   align-items: center;
 }
 .chi-siamo .col-img {
-  border: 1px black solid;
   width: 47%;
 }
 
@@ -156,7 +149,6 @@ body {
 
 .chi-siamo .col-testo {
   width: 47%;
-  border: 1px black solid;
 }
 
 .chi-siamo .col-testo h4 {
@@ -175,7 +167,6 @@ body {
 }
 
 .info-grafico {
-  border: 1px red solid;
   margin: 0px 8% 0px 8%;
   display: flex;
   flex-direction: row;
@@ -199,7 +190,6 @@ body {
   background: none;
   border: none;
   border-top: 1px var(--blue) solid;
-  /* border-bottom: 1px var(--blue) solid; */
   cursor: pointer;
   padding: 15px 0px;
   width: 100%;
@@ -211,11 +201,6 @@ body {
   font-weight: 600;
   font-size: 18px;
   line-height: 125%;
-}
-
-.active,
-.accordion:hover {
-  /* background-color: rgb(228, 228, 228); */
 }
 
 .accordion:after {
@@ -252,7 +237,6 @@ body {
 }
 
 .youtube {
-  border: 2px red solid;
   margin: 0px 8% 80px 8%;
 }
 
@@ -272,25 +256,219 @@ body {
   color: var(--blue);
 }
 
-.youtube .container{
-    border: 1px red solid;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    margin-top: 40px;
+.youtube .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin-top: 40px;
 }
 
-.youtube .container .card{
-    border: 2px solid black;
-    width: 30%;
+.youtube .container .card {
+  width: 30%;
 }
 
-.youtube .container .card p{
-    text-align: left;
-    margin-top: 25px;
-    font-size: 18px;
+.youtube .container .card p {
+  text-align: left;
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+.mail-container {
+  background-image: url(assets/mail-cover.png);
+  width: 100%;
+  padding: 40px 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.mail-container .col-testo {
+  width: 40%;
+}
+
+.mail-container .col-testo h4 {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 125%;
+  text-align: left;
+  color: var(--yellow);
+}
+
+.mail-container .col-testo p {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 125%;
+  color: white;
+}
+
+.mail-container .col-mail {
+  width: 55%;
+}
+
+.col-mail .form {
+  font-family: "Josefin Sans", sans-serif;
+  background: #ffffff;
+  width: 100%;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-mail .form .casella {
+  width: 45%;
+  margin-top: 30px;
+}
+
+.col-mail .form .casella p {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+.col-mail .form .casella input {
+  font-family: "Josefin Sans", sans-serif;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 13px 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--grey);
+}
+
+.col-mail .form .casella:nth-child(5) textarea {
+  min-height: 170px;
+  font-family: "Josefin Sans", sans-serif;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 13px 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--grey);
+}
+
+.col-mail .form button {
+  font-family: "josefin sans", serif;
+  margin-top: 20px;
+  background-color: var(--blue);
+  border: none;
+  padding: 11px 29px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.col-mail .form button:hover {
+  opacity: 0.9;
+}
+
+.col-mail .form .casella:nth-child(1),
+.col-mail .form .casella:nth-child(2) {
+  margin-top: 0px;
+}
+
+.popup-termini {
+  padding: 35px 30px;
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  overflow-y: scroll;
+  background-color: white;
+  border: 1px #595858 solid;
+  display: none;
+  color: #595858;
+}
+
+.popup-termini .bottone button {
+  padding: 10px 12px;
+  position: absolute;
+  right: 20px;
+  border: none;
+  background-color: #ded9d9;
+}
+
+.popup-termini div {
+  margin: 20px 0px;
+}
+
+.popup-termini div h1,
+h2,
+h3 {
+  color: rgb(22, 22, 22);
+}
+
+.partner {
+  width: 84%;
+  margin: 80px 8% 40px 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
+.partner .prima-col {
+  width: 70%;
+}
+
+.partner .prima-col h4 {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 125%;
+  text-align: left;
+  color: var(--yellow);
+  padding-bottom: 20px;
+}
+
+.partner .sec-col a {
+  height: min-content;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-decoration-line: underline;
+  color: var(--blue);
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  border-top: 1px solid #d4d1e2;
+  width: 84%;
+  margin: 40px 8% 0px 8%;
+}
+
+.alert-conferma {
+  border: 2px solid #0e9f6e;
+  border-radius: 8px;
+  background: #def7ec;
+  padding: 0px 20px;
+  width: fit-content;
+  position: fixed;
+  top: -150px;
+  right: 30px;
+  transition: all 2s ease-in-out;
+}
+.alert-conferma p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: #0e9f6e;
+  vertical-align: middle;
 }
 
 @media only screen and (max-width: 900px) {
@@ -357,12 +535,20 @@ body {
     width: 100%;
     margin-top: 40px;
   }
+  .partner {
+    display: flex;
+    flex-direction: column;
+  }
+  .partner .prima-col {
+    width: 100%;
+    margin-bottom: 40px;
+  }
 }
 
 @media only screen and (max-width: 750px) {
   .header .testo h3 {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 30px;
   }
 
@@ -397,21 +583,52 @@ body {
     width: 90%;
     margin: 30px 5% 80px 5%;
   }
-  .youtube .container{
+  .youtube .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
     margin-top: 40px;
-}
+  }
 
-.youtube .container .card{
+  .youtube .container .card {
     width: 100%;
     margin-top: 40px;
-}
+  }
 
-.youtube .container .card:nth-child(1){
+  .youtube .container .card:nth-child(1) {
     margin-top: 0px;
-}
+  }
+  .mail-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .mail-container .col-testo {
+    width: 100%;
+  }
+  .mail-container .col-mail {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .col-mail .form {
+    width: 100%;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .col-mail .form .casella {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .popup-termini {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+  }
 }
