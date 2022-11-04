@@ -47,8 +47,8 @@
     <div class="header">
       <div class="testo">
         <h3>
-          Governiamo l'infinatamente sconosciuto, diffidando da cio che è
-          finitamente conosciuto
+          Governiamo l'<span style="color:#fbb03b">infinatamente</span> sconosciuto, diffidando da cio che è
+          <span style="color:#fbb03b">finitamente</span> conosciuto
         </h3>
         <a style="vertical-align: center" href="#flap"
           >Scopri di più
@@ -98,6 +98,16 @@
         <img src="assets/graph2.png" alt="" srcset="" />
       </div>
       <div class="col-testo">
+        <h4>La nostra strategia</h4>
+        <p class="testo-prima">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+            aliquid qui unde beatae ratione, fugit ut debitis, sed tempore at nemo
+            quidem soluta consectetur. Ipsam hic consequuntur quis. Voluptatum,
+            tenetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Deserunt nesciunt ipsum assumenda vero cum, aliquid tempore officiis
+            minus sit reiciendis ab magni quas doloribus aut vel nam delectus, non
+            temporibus.
+          </p>
         <button class="accordion" style="color: #fbb03b; border-top: none">
           Strategia Monarch
         </button>
@@ -146,15 +156,6 @@
 
     <div class="grafico">
       <canvas id="myChart" height="100"></canvas>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-        aliquid qui unde beatae ratione, fugit ut debitis, sed tempore at nemo
-        quidem soluta consectetur. Ipsam hic consequuntur quis. Voluptatum,
-        tenetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Deserunt nesciunt ipsum assumenda vero cum, aliquid tempore officiis
-        minus sit reiciendis ab magni quas doloribus aut vel nam delectus, non
-        temporibus.
-      </p>
     </div>
 
     <!-- YOUTUBE -->
@@ -603,6 +604,21 @@
       </div>
     </div>
 
+
+    <div class="popup-Disclaimer" id="popup-Disclaimer">
+        <div class="bottone" onclick="nascondiDisclaimer()">
+          <button>Chiudi</button>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error rerum saepe odit expedita blanditiis delectus dolorum magnam. Debitis beatae animi dolore mollitia harum, in, numquam temporibus voluptatem ex, minus cumque?<br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sequi tempora autem error quis illum qui consectetur placeat assumenda animi hic, vitae provident soluta, suscipit consequuntur et natus ducimus nobis.</p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sequi tempora autem error quis illum qui consectetur placeat assumenda animi hic, vitae provident soluta, suscipit consequuntur et natus ducimus nobis.</p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sequi tempora autem error quis illum qui consectetur placeat assumenda animi hic, vitae provident soluta, suscipit consequuntur et natus ducimus nobis.</p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sequi tempora autem error quis illum qui consectetur placeat assumenda animi hic, vitae provident soluta, suscipit consequuntur et natus ducimus nobis.</p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sequi tempora autem error quis illum qui consectetur placeat assumenda animi hic, vitae provident soluta, suscipit consequuntur et natus ducimus nobis.</p>
+        </div>
+      </div>
+
     <div class="partner">
       <div class="prima-col">
         <h4>Partner</h4>
@@ -640,6 +656,13 @@
           >Termini e condizioni</a
         >
       </div>
+      <div class="disclaimer">
+        <a
+          onclick="mostraDisclaimer()"
+          style="color: #1c85e8; text-decoration: underline"
+          >Disclaimer</a
+        >
+      </div>
       <div class="logo" style="color: #6b7280">
         © 2022 Monarch, Inc. All rights reserved.
       </div>
@@ -662,6 +685,12 @@
       }
       function nascondiTermini() {
         document.getElementById("popup-termini").style.display = "none";
+      }
+      function mostraDisclaimer() {
+        document.getElementById("popup-Disclaimer").style.display = "block";
+      }
+      function nascondiDisclaimer() {
+        document.getElementById("popup-Disclaimer").style.display = "none";
       }
       // GRAFICO
       /* DATA */
