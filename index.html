@@ -71,13 +71,21 @@
         <h4>Chi siamo?</h4>
         <p>
           Siamo una società di ricerca e sviluppo specializzata nell'analisi dei
-          dati nel campo dei mercati finanziari.<br />
+          dati nel campo dei mercati finanziari.
+        </p>
+        <p>
           Il nostro obiettivo è di fornire ai nostri partner strategie a ritorno
-          assoluto reali.<br />
+          assoluto reali.
+        </p>
+        <p>
           Grazie alle nostre strategie i nostri partner risultano immuni agli
-          eventi cigno nero.<br />
+          eventi cigno nero.
+        </p>
+        <p>
           Il nostro lavoro si basa sullo studio dei fattori che determinano
-          l'esposizione ad un evento cigno nero al fine di minimizzarli.<br />
+          l'esposizione ad un evento cigno nero al fine di minimizzarli.
+        </p>
+        <p>
           Per raggiungere questo obiettivo ci siamo liberamente ispirati ai
           principi esposti nel libro "Il Cigno nero", di N.N.Taleb.
         </p>
@@ -138,6 +146,15 @@
 
     <div class="grafico">
       <canvas id="myChart" height="100"></canvas>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+        aliquid qui unde beatae ratione, fugit ut debitis, sed tempore at nemo
+        quidem soluta consectetur. Ipsam hic consequuntur quis. Voluptatum,
+        tenetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Deserunt nesciunt ipsum assumenda vero cum, aliquid tempore officiis
+        minus sit reiciendis ab magni quas doloribus aut vel nam delectus, non
+        temporibus.
+      </p>
     </div>
 
     <!-- YOUTUBE -->
@@ -628,15 +645,15 @@
       </div>
     </div>
     <div class="alert-conferma" id="alert-conferma">
-        <p>
-          <img
-            src="assets/circle-thick.svg"
-            alt=""
-            srcset=""
-            style="margin-right: 15px; vertical-align: middle"
-          />La tua mail è stata inviata con successo
-        </p>
-      </div>
+      <p>
+        <img
+          src="assets/circle-thick.svg"
+          alt=""
+          srcset=""
+          style="margin-right: 15px; vertical-align: middle"
+        />La tua mail è stata inviata con successo
+      </p>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -647,43 +664,104 @@
         document.getElementById("popup-termini").style.display = "none";
       }
       // GRAFICO
+      /* DATA */
+      let ar = [5, 36, 19, 69, 22, 8, 39, 80, 47, 13, 12, 1, 61, 48, 60, 9, 52, 45, 35, 77];
+      let ar2 = [23, 41, 54, 15, 11, 6, 4, 21, 17, 43, 40, 77, 36, 58, 10, 62, 80, 39, 68, 64];
+      let ar3 = [24, 12, 31, 41, 30, 25, 38, 55, 56, 26, 61, 8, 20, 42, 53, 57, 35, 48, 34, 60];
+      let ar4 = [75, 61, 26, 35, 57, 39, 36, 40, 7, 60, 63, 27, 37, 2, 58, 14, 19, 47, 42, 64];
+      /*********************/
+      const data = [];
+      const data2 = [];
+      const data3 = [];
+      const data4 = [];
+      for (let i = 0; i < 20; i++) {
+        data.push({ x: i, y: ar[i] });
+        data2.push({ x: i, y: ar2[i] });
+        data3.push({ x: i, y: ar3[i] });
+        data4.push({ x: i, y: ar4[i] });
+      }
+      const totalDuration = 5000;
+      const delayBetweenPoints = totalDuration / data.length;
+      const previousY = (ctx) =>
+        ctx.index === 0
+          ? ctx.chart.scales.y.getPixelForValue(100)
+          : ctx.chart
+              .getDatasetMeta(ctx.datasetIndex)
+              .data[ctx.index - 1].getProps(["y"], true).y;
+      const animation = {
+        x: {
+          type: "number",
+          easing: "linear",
+          duration: delayBetweenPoints,
+          from: NaN, // the point is initially skipped
+          delay(ctx) {
+            if (ctx.type !== "data" || ctx.xStarted) {
+              return 0;
+            }
+            ctx.xStarted = true;
+            return ctx.index * delayBetweenPoints;
+          },
+        },
+        y: {
+          type: "number",
+          easing: "linear",
+          duration: delayBetweenPoints,
+          from: previousY,
+          delay(ctx) {
+            if (ctx.type !== "data" || ctx.yStarted) {
+              return 0;
+            }
+            ctx.yStarted = true;
+            return ctx.index * delayBetweenPoints;
+          },
+        },
+      };
       const ctx = document.getElementById("myChart").getContext("2d");
       const myChart = new Chart(ctx, {
         type: "line",
         data: {
-          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
           datasets: [
             {
               label: "Strategia Monarch",
               borderColor: "#FBB03B",
-              data: [10, 13, 5, 2, 20, 30, 45],
+              backgroundColor: "#FBB03B",
+              data: data,
               borderWidth: 2,
               pointRadius: 0,
             },
             {
               label: "Benchmark Azionario",
               borderColor: "#EF6A85",
-              data: [26, 5, 36, 45, 28, 24, 37],
+              backgroundColor: "#EF6A85",
+              data: data2,
               borderWidth: 2,
               pointRadius: 0,
             },
             {
               label: "Benchmark Bilanciato 60-40",
               borderColor: "#3E9EE1",
-              data: [27, 5, 40, 41, 21, 2, 20],
+              backgroundColor: "#3E9EE1",
+              data: data3,
               borderWidth: 2,
               pointRadius: 0,
             },
             {
               label: "Benchmark obbligazionario",
               borderColor: "#50BEBE",
-              data: [30, 45, 18, 16, 31, 19, 28],
+              backgroundColor: "#50BEBE",
+              data: data4,
               borderWidth: 2,
               pointRadius: 0,
             },
           ],
         },
         options: {
+          animation,
+          interaction: {
+            intersect: false,
+            mode: "index",
+          },
           transitions: {
             show: {
               animations: {
@@ -708,22 +786,28 @@
           },
           plugins: {
             legend: false,
+            tooltip: {
+              title: "value",
+            },
           },
+
           scales: {
             y: {
               beginAtZero: true,
+              display: false,
             },
             y1: {
               type: "linear",
               display: true,
               position: "right",
               grid: {
-                drawOnChartArea: false, // only want the grid lines for one axis to show up
+                drawOnChartArea: true, // only want the grid lines for one axis to show up
               },
             },
           },
         },
       });
+
       // NAVBAR
       const hamburger = document.querySelector(".hamburger");
       const navLinks = document.querySelector(".nav-links");

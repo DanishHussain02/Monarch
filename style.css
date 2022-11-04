@@ -161,9 +161,10 @@ body {
 
 .chi-siamo .col-testo p {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 120%;
   color: var(--blue);
+  margin-bottom: 15px;
 }
 
 .info-grafico {
@@ -469,6 +470,15 @@ h3 {
   line-height: 125%;
   color: #0e9f6e;
   vertical-align: middle;
+}
+
+.grafico p {
+    margin-top: 30px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  color: var(--blue);
+  margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 900px) {
