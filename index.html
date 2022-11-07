@@ -259,11 +259,12 @@
             "
           >
             Inviando questo modulo si accettano i nostri
-            <a
+            <!--<a
               onclick="mostraTermini()"
               style="color: #1c85e8; text-decoration: underline"
               >termini e condizioni</a
-            >
+            >-->        <a href="https://www.iubenda.com/privacy-policy/17710734" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+
             e la nostra Informativa sulla privacy che spiega come possiamo
             raccogliere, utilizzare e divulgare i vostri dati personali, anche a
             terzi.
@@ -832,8 +833,11 @@
             },
             y1: {
               type: "linear",
+              stacked: true,
               display: true,
               position: "right",
+              suggestedMin: 0,
+                suggestedMax:80,
               grid: {
                 drawOnChartArea: true, // only want the grid lines for one axis to show up
               },
