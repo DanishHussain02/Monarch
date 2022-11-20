@@ -160,7 +160,7 @@
 
     <!-- YOUTUBE -->
     <div class="youtube">
-      <h4>Iscriviti al nostro canale youtube</h4>
+      <a href="https://www.youtube.com/@monarchstrategy" target="_blank"><h4>Iscriviti al nostro canale youtube</h4></a>
       <p>103K views e 12k iscritti</p>
       <div class="container">
         <div class="card">
@@ -704,16 +704,28 @@
       let ar2 = [23, 41, 54, 15, 11, 6, 4, 21, 17, 43, 40, 77, 36, 58, 10, 62, 80, 39, 68, 64];
       let ar3 = [24, 12, 31, 41, 30, 25, 38, 55, 56, 26, 61, 8, 20, 42, 53, 57, 35, 48, 34, 60];
       let ar4 = [75, 61, 26, 35, 57, 39, 36, 40, 7, 60, 63, 27, 37, 2, 58, 14, 19, 47, 42, 64];
+      let ar5 = [14, 45, 26, 31, 1, 13, 2, 14, 2, 11, 4, 43, 38, 29, 24, 3, 11, 5, 2, 34];
+      let ar6 = [33, 43, 4, 7, 45, 12, 28, 34, 17, 44, 13, 1, 10, 25, 1, 7, 17, 39, 41, 45];
+      let ar7 = [35, 44, 25, 26, 24, 43, 35, 45, 17, 4, 7, 21, 13, 6, 7, 44, 22, 20, 19, 45]
+      let ar8 = [7, 29, 33, 14, 25, 30, 3, 9, 20, 17, 15, 6, 44, 3, 8, 22, 25, 2, 38, 2];
       /*********************/
       const data = [];
       const data2 = [];
       const data3 = [];
       const data4 = [];
+      const data5 = [];
+      const data6 = [];
+      const data7 = [];
+      const data8 = [];
       for (let i = 0; i < 20; i++) {
         data.push({ x: i, y: ar[i] });
         data2.push({ x: i, y: ar2[i] });
         data3.push({ x: i, y: ar3[i] });
         data4.push({ x: i, y: ar4[i] });
+        data5.push({ x: i, y: ar5[i] });
+        data6.push({ x: i, y: ar6[i] });
+        data7.push({ x: i, y: ar7[i] });
+        data8.push({ x: i, y: ar8[i] });
       }
       const totalDuration = 5000;
       const delayBetweenPoints = totalDuration / data.length;
@@ -786,6 +798,38 @@
               borderColor: "#50BEBE",
               backgroundColor: "#50BEBE",
               data: data4,
+              borderWidth: 2,
+              pointRadius: 0,
+            },
+            {
+              label: "Riga 1",
+              borderColor: "#FFF38C",
+              backgroundColor: "#FFF38C",
+              data: data5,
+              borderWidth: 2,
+              pointRadius: 0,
+            },
+            {
+              label: "Riga 2",
+              borderColor: "#F0E161",
+              backgroundColor: "#F0E161",
+              data: data6,
+              borderWidth: 2,
+              pointRadius: 0,
+            },
+            {
+              label: "Riga 3",
+              borderColor: "#D9CB50",
+              backgroundColor: "#D9CB50",
+              data: data7,
+              borderWidth: 2,
+              pointRadius: 0,
+            },
+            {
+              label: "Riga 4",
+              borderColor: "#C0B236",
+              backgroundColor: "#C0B236",
+              data: data8,
               borderWidth: 2,
               pointRadius: 0,
             },

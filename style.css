@@ -249,6 +249,16 @@ body {
   margin: 0px 8% 80px 8%;
 }
 
+.youtube a{
+  text-decoration: none;
+}
+
+.youtube a:hover{
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+}
+
+
 .youtube h4 {
   font-weight: 700;
   font-size: 40px;
