@@ -240,6 +240,21 @@ body {
   color: var(--blue);
 }
 
+.legenda {
+  border: 1px red solid;
+  width: 84%;
+  margin: 30px 8% 0px 8%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.legenda .single{
+  border: 1px black solid;
+}
+
+
 .grafico {
   width: 84%;
   margin: 30px 8% 80px 8%;
@@ -248,7 +263,7 @@ body {
 .youtube {
   margin: 0px 8% 80px 8%;
 }
-
+/*
 .youtube a{
   text-decoration: none;
 }
@@ -265,7 +280,7 @@ body {
   line-height: 120%;
   text-align: center;
   color: var(--blue);
-}
+}*/
 
 .youtube p {
   font-weight: 500;
@@ -696,5 +711,7 @@ h3 {
     left: 10%;
     width: 80%;
     height: 80%;
+  }
+  .grafico canvas{
   }
 }
