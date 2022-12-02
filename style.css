@@ -712,6 +712,11 @@ h3 {
     width: 80%;
     height: 80%;
   }
-  .grafico canvas{
+  .grafico{
+    border: 1px red solid;
   }
+  .grafico canvas{
+    border: 1px green solid;
+  }
+  
 }
