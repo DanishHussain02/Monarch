@@ -5,13 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monarch</title>
-    {% load static %}
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/style.css' %}"
-    />
+    <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
     <!--EMAIL-->
     <script
@@ -20,87 +14,17 @@
     ></script>
     <script type="text/javascript">
       (function () {
-        emailjs.init("_KK7-GQUl8BF_H9px");
+        emailjs.init("AUAhB2ctf0z0QNZ57");
       })();
     </script>
-
-    <!--////////Cookie Solution-->
-    <script type="text/javascript">
-      var _iub = _iub || [];
-      _iub.csConfiguration = {
-        consentOnContinuedBrowsing: false,
-        floatingPreferencesButtonDisplay: "bottom-right",
-        invalidateConsentWithoutLog: true,
-        perPurposeConsent: true,
-        siteId: 2856491,
-        whitelabel: false,
-        cookiePolicyId: 46640665,
-        lang: "it",
-        banner: {
-          acceptButtonDisplay: true,
-          closeButtonDisplay: false,
-          customizeButtonDisplay: true,
-          explicitWithdrawal: true,
-          listPurposes: true,
-          position: "float-top-center",
-          rejectButtonDisplay: true,
-        },
-      };
-    </script>
-    <script
-      type="text/javascript"
-      src="//cdn.iubenda.com/cs/iubenda_cs.js"
-      charset="UTF-8"
-      async
-    ></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-TN52NKCYNX"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-TN52NKCYNX");
-    </script>
-
-    <!-- Hotjar Tracking Code for https://www.themonarchstrategy.com/ -->
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 3241512, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
   </head>
-
   <body>
-    {% load static %}
-
-    <img
-      src="{% static 'assets/header_graph.svg' %}"
-      alt=""
-      class="header_graph"
-      srcset=""
-    />
+    <img src="assets/header_graph.svg" alt="" class="header_graph" srcset="" />
     <!-- NAVBAR -->
     <div class="navbar">
       <div class="logo">
         <a href="index.html">
-          <img src="{% static 'assets/logo_full.svg' %}" alt="" srcset="" />
+          <img src="assets/logo_full.svg" alt="" srcset="" />
         </a>
       </div>
       <div class="nav-links">
@@ -109,7 +33,7 @@
         <div class="link"><a href="#mail-section">Contattati</a></div>
         <div class="link" style="margin-right: 0px">
           <button>
-            <a href="/accounts/login/" style="color: #00355f">Login</a>
+            <a href="" style="color: #00355f">Login</a>
           </button>
         </div>
       </div>
@@ -123,14 +47,13 @@
     <div class="header">
       <div class="testo">
         <h3>
-          Governiamo l'<span style="color: #fbb03b">infinitamente</span>
-          sconosciuto, diffidando da cio che è
-          <span style="color: #fbb03b">finitamente</span> conosciuto
+          Governiamo l'<span style="color:#fbb03b">infinatamente</span> sconosciuto, diffidando da cio che è
+          <span style="color:#fbb03b">finitamente</span> conosciuto
         </h3>
         <a style="vertical-align: center" href="#flap"
           >Scopri di più
           <img
-            src="{% static 'assets/arrow-right.svg' %}"
+            src="assets/arrow-right.svg"
             style="vertical-align: center"
             alt=""
             srcset=""
@@ -142,7 +65,7 @@
     <!-- CHI SIAMO -->
     <div class="chi-siamo">
       <div class="col-img">
-        <img src="{% static 'assets/cigno.gif' %}" alt="" srcset="" />
+        <img src="assets/cigno.gif" alt="" srcset="" />
       </div>
       <div class="col-testo">
         <h4>Chi siamo?</h4>
@@ -151,7 +74,7 @@
           dati nel campo dei mercati finanziari.
         </p>
         <p>
-          Il nostro obiettivo è fornire ai nostri partner strategie a ritorno
+          Il nostro obiettivo è di fornire ai nostri partner strategie a ritorno
           assoluto reali.
         </p>
         <p>
@@ -172,25 +95,31 @@
     <!-- INFO GRAPH -->
     <div class="info-grafico" id="grafico-section">
       <div class="col-img">
-        <img src="{% static 'assets/graph2.png' %}" alt="" srcset="" />
+        <img src="assets/graph2.png" alt="" srcset="" />
       </div>
       <div class="col-testo">
         <h4>La nostra strategia</h4>
         <p class="testo-prima">
-          Attraverso l’utilizzo di strumenti finanziari con matematiche definite
-          riusciamo a costruire strategie absolute return, scalabili per il
-          rischio, in grado di fornire ritorni assoluti indipendentemente dal
-          comportamento degli indici azionari.
-        </p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+            aliquid qui unde beatae ratione, fugit ut debitis, sed tempore at nemo
+            quidem soluta consectetur. Ipsam hic consequuntur quis. Voluptatum,
+            tenetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Deserunt nesciunt ipsum assumenda vero cum, aliquid tempore officiis
+            minus sit reiciendis ab magni quas doloribus aut vel nam delectus, non
+            temporibus.
+          </p>
         <button class="accordion" style="color: #fbb03b; border-top: none">
-          Strategia Monarch (Rischio Medio)
+          Strategia Monarch
         </button>
         <div class="panel">
           <p>
             La performance della strategia Monarch è calcolata al netto dei
-            costi degli strumenti finanziari sottostanti e al lordo degli oneri
-            fiscali. Per rischio medio si intende una strategia che si pone
-            l'obiettivo di contenere il drawdown tra il -4% e il -5%.
+            costi degli strumenti finanziari sottostanti e al lordo del costo
+            della liquidità* e degli oneri fiscali. Il costo della liquidità è
+            stato calcolato utilizzando il rendimento annualizzato dell'ETF
+            iShares € Govt Bond 0-1yr UCITS (IEGE), pari a -0.85%. Tale costo
+            non è stato applicato per il periodo che va dal 13/08/2021 al
+            31/08/2022.
           </p>
         </div>
 
@@ -225,27 +154,15 @@
       </div>
     </div>
 
+    
     <div class="grafico">
-      <canvas id="myChart" height="100"></canvas>
+      <canvas id="myChart" ></canvas>
     </div>
 
     <!-- YOUTUBE -->
     <div class="youtube">
-      <div class="link" style=" text-align: center">
-        <a
-        target="_blank"
-          href="https://www.youtube.com/@monarchstrategy"
-          style="
-            font-weight: 700;
-            font-size: 40px;
-            line-height: 120%;
-            text-align: center;
-            color: #00355f;
-          "
-          >Iscriviti al nostro canale youtube</a
-        >
-      </div>
-      <p>110K views e 7k iscritti</p>
+      <a href="https://www.youtube.com/@monarchstrategy" target="_blank"><h4>Iscriviti al nostro canale youtube</h4></a>
+      <p>103K views e 12k iscritti</p>
       <div class="container">
         <div class="card">
           <iframe
@@ -289,10 +206,7 @@
     <div class="mail-container" id="mail-section">
       <div class="col-testo">
         <h4>Contatti</h4>
-        <p>
-          Scopri come funziona la strategia prenotando un one to one meeting e
-          per conoscere i prossimi eventi live.
-        </p>
+        <p>Richiedi una consulenza gratuita, sarai ricontattato in giornata</p>
       </div>
       <div class="col-mail">
         <div class="form">
@@ -350,31 +264,7 @@
               onclick="mostraTermini()"
               style="color: #1c85e8; text-decoration: underline"
               >termini e condizioni</a
-            >-->
-
-            <a
-              href="https://www.iubenda.com/privacy-policy/46640665"
-              class="iubenda-white no-brand iubenda-noiframe iubenda-embed iubenda-noiframe"
-              title="Privacy Policy "
-              >Privacy Policy</a
-            >
-            <script type="text/javascript">
-              (function (w, d) {
-                var loader = function () {
-                  var s = d.createElement("script"),
-                    tag = d.getElementsByTagName("script")[0];
-                  s.src = "https://cdn.iubenda.com/iubenda.js";
-                  tag.parentNode.insertBefore(s, tag);
-                };
-                if (w.addEventListener) {
-                  w.addEventListener("load", loader, false);
-                } else if (w.attachEvent) {
-                  w.attachEvent("onload", loader);
-                } else {
-                  w.onload = loader;
-                }
-              })(window, document);
-            </script>
+            >-->        <a href="https://www.iubenda.com/privacy-policy/17710734" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 
             e la nostra Informativa sulla privacy che spiega come possiamo
             raccogliere, utilizzare e divulgare i vostri dati personali, anche a
@@ -716,134 +606,39 @@
       </div>
     </div>
 
+
     <div class="popup-Disclaimer" id="popup-Disclaimer">
-      <div class="bottone" onclick="nascondiDisclaimer()">
-        <button>Chiudi</button>
+        <div class="bottone" onclick="nascondiDisclaimer()">
+          <button>Chiudi</button>
+        </div>
+        <div>
+            <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error rerum saepe odit expedita blanditiis delectus dolorum magnam. Debitis beatae animi dolore mollitia harum, in, numquam temporibus voluptatem ex, minus cumque?<br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sequi tempora autem error quis illum qui consectetur placeat assumenda animi hic, vitae provident soluta, suscipit consequuntur et natus ducimus nobis.</p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sequi tempora autem error quis illum qui consectetur placeat assumenda animi hic, vitae provident soluta, suscipit consequuntur et natus ducimus nobis.</p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sequi tempora autem error quis illum qui consectetur placeat assumenda animi hic, vitae provident soluta, suscipit consequuntur et natus ducimus nobis.</p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sequi tempora autem error quis illum qui consectetur placeat assumenda animi hic, vitae provident soluta, suscipit consequuntur et natus ducimus nobis.</p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sequi tempora autem error quis illum qui consectetur placeat assumenda animi hic, vitae provident soluta, suscipit consequuntur et natus ducimus nobis.</p>
+        </div>
       </div>
-      <div>
-        <h3>PREMESSA</h3>
-        <p>
-          Il presente documento costituisce materiale di marketing e non è il
-          risultato di una ricerca finanziaria/d’investimento indipendente,
-          pertanto non è stato preparato in accordo con i requisiti legali
-          d’indipendenza di ricerca finanziaria/d’investimento e non è soggetto
-          ad alcun divieto di negoziazione prima della diffusione della ricerca
-          finanziaria/d’investimento. È stato prodotto dalla Holcad SA di
-          Lugano. Le informazioni concernenti gli strumenti finanziari e gli
-          emittenti vengono aggiornate senza regolarità o a seguito di eventi
-          rilevanti.
-        </p>
-        <br />
-
-        <h3>IMPORTANTI INFORMAZIONI LEGALI</h3>
-        <p>
-          Le informazioni e le opinioni contenute nel presente documento sono
-          state prodotte alla data della stesura del presente documento e sono
-          soggette a variazioni senza preavviso. Il presente documento ha scopi
-          puramente informativi e non costituisce una consulenza, un’offerta o
-          un invito da parte o per conto di Holcad SA a comprare o vendere
-          titoli, prodotti derivati basati su titoli, o altri prodotti né a
-          partecipare a strategie di trading specifiche in qualsivoglia
-          giurisdizione ai sensi della legge sui servizi finanziari. Le opinioni
-          e i commenti degli autori riflettono i loro giudizi correnti, ma non
-          necessariamente quelli di altre società Holcad SA o di eventuali altre
-          parti terze. È possibile che altre società di Holcad SA abbiano
-          pubblicato o pubblichino in futuro altri documenti il cui contenuto o
-          le cui conclusioni non sono in linea con il presente documento. Holcad
-          SA non si assume l’obbligo di garantire che tali documenti vengano
-          portati all’attenzione dei destinatari del presente documento. Sebbene
-          le informazioni e i dati ivi contenuti siano ottenuti da fonti
-          ritenute affidabili, non viene resa alcuna dichiarazione in merito
-          all’accuratezza o completezza di tali informazioni. In particolare, è
-          possibile che le informazioni fornite nel presente documento non
-          coprano tutte le informazioni rilevanti relative agli strumenti
-          finanziari o agli emittenti di detti strumenti. Holcad SA non accetta
-          alcuna responsabilità per le perdite che dovessero insorgere in
-          relazione all’utilizzo del presente documento.
-        </p>
-        <br />
-
-        <h3>IDONEITÀ E SOSTENIBILITÀ</h3>
-
-        <p>
-          Nulla nel presente documento costituisce consulenza d’investimento,
-          legale, contabile o fiscale, né vi sono contenute dichiarazioni alcune
-          in merito all’idoneità o opportunità di un determinato investimento o
-          strategia alle circostanze individuali né raccomandazioni personali
-          dirette a investitori specifici. Holcad SA raccomanda agli investitori
-          di valutare indipendentemente, con l’ausilio di un consulente
-          professionista, i rischi finanziari specifici nonché le conseguenze di
-          natura legale, normativa, creditizia, fiscale e contabile. In caso di
-          richiamo di un rapporto di ricerca specifico, il presente documento
-          non deve essere letto senza considerare il rapporto specifico indicato
-          che può essere consegnato su richiesta.
-        </p>
-        <br />
-
-        <h3>RISCHI GENERALI</h3>
-
-        <p>
-          Il prezzo, il valore e il reddito degli investimenti in qualsiasi
-          categoria di investimento menzionata nel presente documento sono
-          soggetti a oscillazioni e gli investitori possono non recuperare
-          l’importo inizialmente investito. I rischi insiti nelle categorie di
-          investimento menzionate nella presente comprendono, in maniera non
-          limitativa, quelli di mercato, creditizi, politici ed economici.
-          L’investitore può essere esposto al rischio di cambio quando i
-          prodotti o i relativi strumenti sottostanti sono denominati in una
-          valuta diversa da quella del Paese in cui l’investitore risiede.
-          L’investimento e la sua performance sarebbero pertanto esposti alle
-          oscillazioni dei cambi e il loro valore potrebbe aumentare o
-          diminuire. I rischi particolari associati a specifici investimenti
-          menzionati nel presente documento vengono resi noti in maniera
-          evidente nel foglio informativo del prodotto pertinente, del contratto
-          di sottoscrizione, della nota informativa, del prospetto o di altro
-          documento di offerta relativo all’emissione dei titoli o di altri
-          strumenti finanziari. Tali documenti sono disponibili su richiesta a
-          titolo gratuito. Gli investimenti nei mercati emergenti sono
-          speculativi e soggetti a una volatilità di gran lunga superiore
-          rispetto a quelli effettuati sui mercati sviluppati. Qualsiasi
-          decisione di investimento deve essere presa solamente dopo aver letto
-          attentamente il prospetto informativo in vigore e/o altri documenti o
-          informazioni disponibili. Questo documento può includere cifre
-          relative alla simulazione di performance passata. La performance
-          passata, le simulazioni e le previsioni di performance non sono
-          indicatori affidabili della performance futura. Azioni, titoli di
-          debito di banche (ad esempio obbligazioni bancarie e certificati con
-          interessi) e altri crediti nei confronti di istituti finanziari sono
-          soggetti a disposizioni particolari, come la «Direttiva sul
-          risanamento e risoluzione degli enti creditizi» e il «Meccanismo di
-          risoluzione unico». Tali disposizioni possono avere ripercussioni
-          negative per l’investitore/partner contrattuale dell’istituto
-          finanziario in caso di dissesto e di necessità di risoluzione
-          dell’istituto finanziario.
-        </p>
-        <br />
-      </div>
-    </div>
 
     <div class="partner">
       <div class="prima-col">
         <h4>Partner</h4>
         <img
-          src="{% static 'assets/FsaPos.png' %}"
+          src="assets/FsaPos.png"
           width="40%"
           style="margin-right: 40px"
           alt=""
           srcset=""
         />
-        <img
-          src="{% static 'assets/LightGray.png' %}"
-          width="40%"
-          alt=""
-          srcset=""
-        />
+        <img src="assets/LightGray.png" width="40%" alt="" srcset="" />
       </div>
       <div class="sec-col">
         <a href="https://cirdancapital.com/product/xs2369359067" target="_blank"
-          >Ad agosto 2021 Cirdan Capital ha emesso un certificato quotato nel
+          >Ad agosto 2021 Cirdan Capital ha emesso un certificato quotato in nel
           segmento EuroTLX di BorsaItaliana che replica la strategia Monarch
-          <img src="{% static 'assets/external-link.svg' %}" alt="" srcset=""
+          <img src="assets/external-link.svg" alt="" srcset=""
         /></a>
       </div>
     </div>
@@ -851,7 +646,7 @@
     <div class="footer">
       <div class="logo">
         <img
-          src="{% static 'assets/logo.png' %}"
+          src="assets/logo.png"
           style="width: 45px; margin: 6px 0px"
           alt=""
           srcset=""
@@ -863,29 +658,8 @@
           style="color: #1c85e8; text-decoration: underline"
           >Termini e condizioni</a
         >-->
-        <a
-          href="https://www.iubenda.com/privacy-policy/46640665"
-          class="iubenda-white no-brand iubenda-noiframe iubenda-embed iubenda-noiframe"
-          title="Privacy Policy "
-          >Privacy Policy</a
-        >
-        <script type="text/javascript">
-          (function (w, d) {
-            var loader = function () {
-              var s = d.createElement("script"),
-                tag = d.getElementsByTagName("script")[0];
-              s.src = "https://cdn.iubenda.com/iubenda.js";
-              tag.parentNode.insertBefore(s, tag);
-            };
-            if (w.addEventListener) {
-              w.addEventListener("load", loader, false);
-            } else if (w.attachEvent) {
-              w.attachEvent("onload", loader);
-            } else {
-              w.onload = loader;
-            }
-          })(window, document);
-        </script>
+        <a href="https://www.iubenda.com/privacy-policy/17710734" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+
       </div>
       <div class="disclaimer">
         <a
@@ -895,7 +669,7 @@
         >
       </div>
       <div class="logo" style="color: #6b7280">
-        © 2022 Holcad SA, Inc. All rights reserved.
+        © 2022 Monarch, Inc. All rights reserved.
       </div>
     </div>
     <div class="alert-conferma" id="alert-conferma">
@@ -909,7 +683,7 @@
       </p>
     </div>
 
-    {% csrf_token %}
+
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -927,33 +701,33 @@
       }
       // GRAFICO
       /* DATA */
-      //let ar = [5, 36, 19, 69, 22, 8, 39, 80, 47, 13, 12, 1, 61, 48, 60, 9, 52, 45, 35, 77];
-      //let ar2 = [23, 41, 54, 15, 11, 6, 4, 21, 17, 43, 40, 77, 36, 58, 10, 62, 80, 39, 68, 64];
-      //let ar3 = [24, 12, 31, 41, 30, 25, 38, 55, 56, 26, 61, 8, 20, 42, 53, 57, 35, 48, 34, 60];
-      //let ar4 = [75, 61, 26, 35, 57, 39, 36, 40, 7, 60, 63, 27, 37, 2, 58, 14, 19, 47, 42, 64];
+      let ar = [5, 36, 19, 69, 22, 8, 39, 80, 47, 13, 12, 1, 61, 48, 60, 9, 52, 45, 35, 77];
+      let ar2 = [23, 41, 54, 15, 11, 6, 4, 21, 17, 43, 40, 77, 36, 58, 10, 62, 80, 39, 68, 64];
+      let ar3 = [24, 12, 31, 41, 30, 25, 38, 55, 56, 26, 61, 8, 20, 42, 53, 57, 35, 48, 34, 60];
+      let ar4 = [75, 61, 26, 35, 57, 39, 36, 40, 7, 60, 63, 27, 37, 2, 58, 14, 19, 47, 42, 64];
+      let ar5 = [14, 45, 26, 31, 1, 13, 2, 14, 2, 11, 4, 43, 38, 29, 24, 3, 11, 5, 2, 34];
+      let ar6 = [33, 43, 4, 7, 45, 12, 28, 34, 17, 44, 13, 1, 10, 25, 1, 7, 17, 39, 41, 45];
+      let ar7 = [35, 44, 25, 26, 24, 43, 35, 45, 17, 4, 7, 21, 13, 6, 7, 44, 22, 20, 19, 45]
+      let ar8 = [7, 29, 33, 14, 25, 30, 3, 9, 20, 17, 15, 6, 44, 3, 8, 22, 25, 2, 38, 2];
       /*********************/
-
-
-      //const data = [];
-      //const data2 = [];
-      //const data3 = [];
-      //const data4 = [];
-
-      //for (let i = 0; i < 20; i++) {
-      //  data.push({ x: i, y: ar[i] });
-      //  data2.push({ x: i, y: ar2[i] });
-      //  data3.push({ x: i, y: ar3[i] });
-      //  data4.push({ x: i, y: ar4[i] });
-      //}
-
-      data={{ monarch|safe }}
-      data2={{ equity|safe }}
-      data3={{ bilanciato|safe }}
-      data4={{ obbligazionario|safe }}
-      data5={{ riga1|safe }}
-      data6={{ riga2|safe }}
-      data7={{ riga3|safe }}
-
+      const data = [];
+      const data2 = [];
+      const data3 = [];
+      const data4 = [];
+      const data5 = [];
+      const data6 = [];
+      const data7 = [];
+      const data8 = [];
+      for (let i = 0; i < 20; i++) {
+        data.push({ x: i, y: ar[i] });
+        data2.push({ x: i, y: ar2[i] });
+        data3.push({ x: i, y: ar3[i] });
+        data4.push({ x: i, y: ar4[i] });
+        data5.push({ x: i, y: ar5[i] });
+        data6.push({ x: i, y: ar6[i] });
+        data7.push({ x: i, y: ar7[i] });
+        data8.push({ x: i, y: ar8[i] });
+      }
       const totalDuration = 5000;
       const delayBetweenPoints = totalDuration / data.length;
       const previousY = (ctx) =>
@@ -994,14 +768,14 @@
       const myChart = new Chart(ctx, {
         type: "line",
         data: {
-          labels: {{ mylabels|safe }},
+          labels: [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,],
           datasets: [
             {
               label: "Strategia Monarch",
               borderColor: "#FBB03B",
               backgroundColor: "#FBB03B",
               data: data,
-              borderWidth: 5,
+              borderWidth: 2,
               pointRadius: 0,
             },
             {
@@ -1052,6 +826,14 @@
               borderWidth: 2,
               pointRadius: 0,
             },
+            {
+              label: "Riga 4",
+              borderColor: "#C0B236",
+              backgroundColor: "#C0B236",
+              data: data8,
+              borderWidth: 2,
+              pointRadius: 0,
+            },
           ],
         },
         options: {
@@ -1082,33 +864,30 @@
               },
             },
           },
-          plugins: {/*  CODICE LEGENDA
+          plugins: {
             legend: {
                 display: true,
                 labels: {
                     color: 'rgb(255, 99, 132)'
                 }
-            },*/
+            },
             tooltip: {
               title: "value",
-            }
+            },
           },
 
           scales: {
             y: {
               beginAtZero: true,
-              display: true,
-              position: "right",
-              max: 110,
-              min: 75,
-              ticks:{
-                  steSize: 5
-              }
+              display: false,
             },
             y1: {
               type: "linear",
-              display: false,
+              stacked: true,
+              display: true,
               position: "right",
+              suggestedMin: 0,
+                suggestedMax:80,
               grid: {
                 drawOnChartArea: true, // only want the grid lines for one axis to show up
               },
@@ -1159,7 +938,7 @@
           telefono: document.getElementById("phone").value,
         };
         emailjs
-          .send("service_bw0x5us", "template_veqvlgp", params)
+          .send("service_tv1b2xa", "template_yj6gky3", params)
           .then(function (res) {
             document.getElementById("alert-conferma").style.top = "20px";
             setTimeout(function () {
@@ -1170,15 +949,5 @@
     </script>
 
     <script src="app.js"></script>
-
-    <!-- Start of HubSpot Embed Code -->
-    <script
-      type="text/javascript"
-      id="hs-script-loader"
-      async
-      defer
-      src="//js-eu1.hs-scripts.com/26581686.js"
-    ></script>
-    <!-- End of HubSpot Embed Code -->
   </body>
 </html>
